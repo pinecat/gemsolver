@@ -2,7 +2,7 @@
 
 require "rails/generators/base"
 
-module GemCache
+module Gemcache
   class InstallGenerator < Rails::Generators::Base
     desc "Create an initializer file for Gemcache configuration options"
     def create_initializer_file
