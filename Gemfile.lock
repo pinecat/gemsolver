@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    gemcache (0.2.0)
+    gemsolver (0.2.1)
       rails (>= 7.0.7.2)
 
 GEM
@@ -154,7 +154,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  gemcache!
+  gemsolver!
   puma
   sqlite3
 
