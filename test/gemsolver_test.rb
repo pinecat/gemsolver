@@ -1,8 +1,8 @@
 require "test_helper"
 
-class GemCacheTest < ActiveSupport::TestCase
+class GemSolverTest < ActiveSupport::TestCase
   class Gemfu
-    include GemCache
+    include GemSolver
 
     attr_reader :name, :requirements, :info_file, :stories, :versions, :version, :info, :quick_file, :gem_file
 
@@ -25,7 +25,7 @@ class GemCacheTest < ActiveSupport::TestCase
   gf = Gemfu.new(gem)
 
   test "it has a version number" do
-    assert GemCache::VERSION
+    assert GemSolver::VERSION
   end
 
   test "it has a default host" do

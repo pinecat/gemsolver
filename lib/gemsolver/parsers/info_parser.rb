@@ -1,4 +1,4 @@
-module GemCache
+module GemSolver
   class InfoParser
     # The version of the gem from the info entry.
     attr_reader :version

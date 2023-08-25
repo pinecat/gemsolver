@@ -1,8 +1,8 @@
-require_relative "lib/gemcache/version"
+require_relative "lib/gemsolver/version"
 
 Gem::Specification.new do |spec|
   spec.name        = "gemcache"
-  spec.version     = GemCache::VERSION
+  spec.version     = GemSolver::VERSION
   spec.authors     = ["Rory Dudley"]
   spec.email       = ["rory.dudley@gmail.com"]
   spec.homepage    = "https://github.com/pinecat/gemcache"

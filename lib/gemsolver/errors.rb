@@ -1,4 +1,4 @@
-module GemCache
+module GemSolver
   #
   # Raised when /info/<gem> cannot be found on the remote gem host.
   #

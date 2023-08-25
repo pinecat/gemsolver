@@ -1,22 +1,22 @@
-# GemCache
-GemCache is a plugin for Rails that caches Ruby gems from any [rubygems.org](https://rubygems.org) compatible host.
-It is built primarly to work with [GemApi](https://github.com/pinecat/gemapi), which in turn is utilized by [Gemstruct](https://github.com/pinecat/gemstruct).
+# Gem Solver
+Gem Solver is a plugin for Rails that caches Ruby gems from any [rubygems.org](https://rubygems.org) compatible host.
+It is built primarly to work with [GemCache](https://github.com/pinecat/gemcache).
 
 ## Installation
-To use GemCache in your rails project, first:
+To use GemSolver in your rails project, first:
 ```
-bundle add gemcache
+bundle add gemsolver
 ```
 
 then:
 ```
-rails g gemcache:install
+rails g gemsolver:install
 ```
 
 ## Usage
 ```ruby
 class Gemfu
-  include GemCache
+  include GemSolver
 
   attr_reader :name, :requirements, :info_file, :stories, :versions, :version, :info, :quick_file, :gem_file
 
@@ -42,7 +42,7 @@ File.binwrite("path/to/colorize.gem", gemfu.gem_file)
 ```
 
 ## Contributing
-Bug reports and pull requests are welcome on Github at https://github.com/pinecat/gemcache/issues and https://github.com/pinecat/gemcache/pulls, respectively.
+Bug reports and pull requests are welcome on Github at https://github.com/pinecat/gemsolver/issues and https://github.com/pinecat/gemsolver/pulls, respectively.
 
 ## License
 The gem is available as open source under the terms of the [BSD 3-Clause License](https://opensource.org/license/bsd-3-clause/).

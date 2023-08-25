@@ -1,3 +1,3 @@
-module GemCache
+module GemSolver
   VERSION = "0.1.1"
 end

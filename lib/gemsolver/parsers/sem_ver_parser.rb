@@ -1,4 +1,4 @@
-module GemCache
+module GemSolver
   #
   # Creates a list of appropriate gem and dependency versions
   # based on semantic versioning requirements. The latest

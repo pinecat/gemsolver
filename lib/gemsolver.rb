@@ -1,14 +1,13 @@
-require "gemcache/version"
-require "gemcache/railtie"
-require "gemcache/errors"
-require "gemcache/parsers/info_parser"
-require "gemcache/parsers/sem_ver_parser"
+require "gemsolver/version"
+require "gemsolver/railtie"
+require "gemsolver/errors"
+require "gemsolver/parsers/info_parser"
+require "gemsolver/parsers/sem_ver_parser"
 require "net/http"
 require "stringio"
-require "rubygems/package"
 require "rubygems/indexer"
 
-module GemCache
+module GemSolver
   #
   # The host of the remote gem server.
   # The default is https://rubygems.org.
