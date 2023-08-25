@@ -1,7 +1,7 @@
 require_relative "lib/gemsolver/version"
 
 Gem::Specification.new do |spec|
-  spec.name        = "gemcache"
+  spec.name        = "gemsolver"
   spec.version     = GemSolver::VERSION
   spec.authors     = ["Rory Dudley"]
   spec.email       = ["rory.dudley@gmail.com"]
