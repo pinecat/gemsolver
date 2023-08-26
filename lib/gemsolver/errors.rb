@@ -4,7 +4,7 @@ module GemSolver
   #
   class GemNotFoundError < StandardError
     def initialize(name)
-      super("The '#{name}' gem could not be found on '#{@@host}'")
+      super("The '#{name}' gem could not be found on '#{GemSolver.host}'")
     end
   end
 
