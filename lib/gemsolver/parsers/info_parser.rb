@@ -52,18 +52,27 @@ module GemSolver
       return if raw.blank?
 
       parts = raw.split(" ", 2)
-      @version = Gem::Version.new(parts[0])
+      @version = Gem::Version.new(sanitize_version(parts[0]))
       parts.drop(1)
+    end
+
+    def sanitize_version(version)
+      # TODO: Not sure how rubygems.org handles this,
+      # but there are definitely info files out there with characters
+      # that throw errors when trying to pass them to Gem::Version.new.
+      # This might be good enough, since it's really only used for
+      # comparing versions, but it's probably worth looking into.
+      version.gsub("_", ".").gsub("+", ".")
     end
 
     def parse_dependencies(parts)
       return if parts.blank?
 
-      parts = parts.split(",")
-      parts.flatten! if parts.length == 1
+      parts = parts[0].split(",")
       @dependencies = []
       parts.each do |p|
         name, requirements = p.split(":")
+        requirements = requirements.split("&")
         @dependencies << Gem::Dependency.new(name, requirements)
       end
     end

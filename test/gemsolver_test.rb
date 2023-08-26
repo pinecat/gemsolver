@@ -60,4 +60,12 @@ class GemSolverTest < ActiveSupport::TestCase
   test "it can retrieve a gem file" do
     assert gf.gem_file
   end
+
+  test "it can handle multiple dependencies" do
+    gem2 = Gem::Dependency.new("nokogiri", nil)
+    Gemfu.new(gem2)
+
+    gem3 = Gem::Dependency.new("pry", nil)
+    Gemfu.new(gem3)
+  end
 end
