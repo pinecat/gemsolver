@@ -59,7 +59,8 @@ module GemSolver
     def parse_dependencies(parts)
       return if parts.blank?
 
-      parts = parts.split(",").flatten
+      parts = parts.split(",")
+      parts.flatten! if parts.length == 1
       @dependencies = []
       parts.each do |p|
         name, requirements = p.split(":")
