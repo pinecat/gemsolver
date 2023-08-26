@@ -62,10 +62,13 @@ class GemSolverTest < ActiveSupport::TestCase
   end
 
   test "it can handle multiple dependencies" do
-    gem2 = Gem::Dependency.new("nokogiri", nil)
-    Gemfu.new(gem2)
+    gem_nokogiri = Gem::Dependency.new("nokogiri", nil)
+    Gemfu.new(gem_nokogiri)
 
-    gem3 = Gem::Dependency.new("pry", nil)
-    Gemfu.new(gem3)
+    gem_pry = Gem::Dependency.new("pry", nil)
+    Gemfu.new(gem_pry)
+
+    gem_psych = Gem::Dependency.new("psych", nil)
+    Gemfu.new(gem_psych)
   end
 end

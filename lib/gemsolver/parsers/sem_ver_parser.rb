@@ -31,7 +31,7 @@ module GemSolver
             break
           end
         end
-        @available << s.version unless one_constraint_failed
+        @available << s.original_version unless one_constraint_failed
       end
 
       raise NoAvailableVersionsError.new(name) if @available.blank?

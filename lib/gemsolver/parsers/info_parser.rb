@@ -3,6 +3,9 @@ module GemSolver
     # The version of the gem from the info entry.
     attr_reader :version
 
+    # The original version string (might get messed up in sanitization or Gem::Version).
+    attr_reader :original_version
+
     # A list of Gem::Dependencies from the info entry.
     attr_reader :dependencies
 
@@ -52,6 +55,7 @@ module GemSolver
       return if raw.blank?
 
       parts = raw.split(" ", 2)
+      @original_version = parts[0]
       @version = Gem::Version.new(sanitize_version(parts[0]))
       parts.drop(1)
     end
