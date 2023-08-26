@@ -55,7 +55,7 @@ module GemSolver
   def fetch_gem
     gem_uri = URI.parse("#{@@host}/gems/#{@name}-#{@version}.gem")
     response = Net::HTTP.get_response(gem_uri)
-    raise GemNotFoundError(@name) unless response.is_a? Net::HTTPSuccess
+    raise GemNotFoundError.new(@name) unless response.is_a? Net::HTTPSuccess
     response.body
   end
 end
