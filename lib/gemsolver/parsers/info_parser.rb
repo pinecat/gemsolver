@@ -42,6 +42,7 @@ module GemSolver
     end
 
     def self.parse(raw)
+      return nil if raw.nil? || raw.empty?
       stories = []
       raw.lines.drop(1).each do |l|
         stories << new(l)
